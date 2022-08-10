@@ -1,0 +1,46 @@
+//1
+
+const func1 = () => {
+    console.log("Hello!!")
+}
+func1();
+
+
+//2
+
+const func2 = (a, b) => {
+    let sum = a+b;
+    console.log("Sum of " + a + " " + b + " is " + sum);
+}
+func2();
+
+//3
+
+const func3 = () => {
+    console.log("This is an arrow function")
+}
+func3();
+
+//4
+
+console.log("undefined");
+
+// 5
+
+console.log("21");
+
+
+// 6
+console.log("a is not defined, referrance error");
+
+//7
+
+let a = 1;
+const func4 = (n) => {
+    for(let i=1;i<=n;i++){
+        
+        a =  a * i ;
+    }
+    console.log(a);
+}
+func4(5)
