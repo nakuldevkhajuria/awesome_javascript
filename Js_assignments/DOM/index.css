@@ -1,0 +1,19 @@
+.card{
+    background-color: brown;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+.book{
+    display: flex;
+    flex-flow: row wrap;
+}
+#clock{
+    background-color: palevioletred;
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(226, 176, 39);
+    border: 2px solid black;
+}

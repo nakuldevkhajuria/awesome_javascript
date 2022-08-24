@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <br><br><br>
+Question 1:
+<div id="text">My ID name is text</div>
+<br><br><br>
+Question 2:
+<h1>I am the H1 tag</h1>
+    
+    <br><br><br>
+Question 3:
+<div class="box">Hi i have class as box</div>
+<br><br><br>
+Question 4:
+<h1 class="change">Hello</h1>
+<button onclick="changeMe()">Click me</button>
+<br><br><br>
+Question 5:
+<div class="book">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+</div>
+<button onclick="changeDirection()">Click me</button>
+<br><br><br>
+Question 6 : <br><br>
+/* What’s the difference between window vs document?
+    Document Object: The document object represent a web page that is loaded
+        in the browser. By accessing the document object, we can access the
+        element in the HTML page. With the help of document objects,
+        we can add dynamic content to our web page. The document object
+        can be accessed with a window.document or just document.
+
+    Window Object: The window object is the topmost object of the DOM hierarchy.
+        It represents a browser window or frame that displays the contents of the
+        webpage. Whenever a window appears on the screen to display the contents
+        of the document, the window object is created. */
+<br><br><br>
+Question 7:
+<h1 id = "heading">Hello</h1>
+<button onclick="changeColor()">Click me</button>
+<br><br><br>
+Question 8:
+<h1 class="inner">Hello world</h1>
+<button onclick="replaceText()">Click me</button>
+<br><br><br>
+Question 9:
+<div id="clock"></div>
+<br><br><br>
+Question 10:<br><br>
+The selected year is:
+<select name="" id="drop" onchange="printvalue()">
+   
+    <option value="20-21">20-21</option>
+    <option value="21-22">21-22</option>
+    <option value="22-23">22-23</option>
+    <option value="23-24">23-24</option>
+</select>
+<br><br>
+<div id="print">Please select the Year Above.</div>
+
+<br><br><br>
+Question 11:
+<form action="" class="form">
+    <label for="name">Name:</label>
+    <input required="" type="text" name="name" id="name"><br><br>
+    <label for="email">Email:</label>
+    <input required="" oninput="emailCheck()" type="email" name="email" id="email">
+    <span id="emailcheck" class="check"></span><br><br>
+    <label for="phoneno">Phone No:</label>
+    <input required="" oninput="numberCheck()" type="number" name="phoneno" id="phoneno">
+    <span class="check" id="digitcheck"></span>
+    <span class="check" id="startcheck"></span><br><br>
+    <label for="byear">Birth Year:</label>
+    <input required="" oninput="bYearCheck()" type="number" name="byear" id="byear">
+    <span class="check" id="byearcheck"></span><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+
+<script src="./index.js"></script>
+</body>
+</html>
