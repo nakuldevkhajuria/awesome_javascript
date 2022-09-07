@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+</link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+</head>
+<body>
+<div class="header" id="header">
+<div class="container" id ="container">
+    <div class="title">
+        <h1 class="task"><span class="task">Tasks</span><span class="liste"> List</span></h1>
+        
+
+    </div>
+   
+    <div class="addItem" ><div id="add" class="fas fa-plus-circle fa-2x"> </div><span style="color: white;font-size: 40px;"> Add Item</span></div>
+   
+
+  
+
+  
+</div>
+<div class="p1" id="items">No items in the todo List</div>
+
+<div class="parent" id="parent"></div> 
+
+
+<!-- ADD NEW LIST -->
+<div class="list"><div class="adlis">
+    <div >Add New List</div>
+    <input type="text" id ="text" placeholder="Add New List">
+    <br><br>
+    <button class="b1" type = "submit" onclick="addTask()">Add</button>
+    <button  class="b2" type = "submit">Close</button>
+</div></div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Add new item -->
+<div class="additem stack-top" id="item2">
+
+    <label class="inp">Add New Item</label><br>
+    
+    <input type="text" name="itemName" id="pText"  value="" placeholder="Add New Item"><br>
+
+    <button type="submit" class="btn" id="addSub"><p>Add</p></button>
+
+    <button type="" class="btn algn" id="downSub"><p class="algn">Close</p></button>
+</div>s
+
+
+
+
+<script src="./index.js"></script>
+
+</body>
+</html>
