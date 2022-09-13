@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    Question 1: Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()
+    <pre>
+
+        All three of the call, bind, and apply methods set the this argument to the function.
+
+        1.  The call and apply methods set this to a function and call the function.
+        2.  The bind method will only set this to a function. We will need to separately invoke the function.
+
+    Call
+
+        function test(arg1, arg2){
+            console.log(this.num, arg1, arg2); // 100, 10, 20
+          }
+          
+          test.call({num: 100}, 10, 20);
+          
+          here, {num :100} is an object, which will take place of this, in the function test.
+          and Object.num will be accessed 
+
+
+    Apply
+
+
+          function test(...arguments){
+            console.log(this.num, arguments);//100, [1,2,3]
+          }
+          
+          test.apply({num: 100}, [1,2,3]); 
+
+          The apply method binds the this value to the function and executes the function. It takes the this value and a single array object as parameters, and it returns the value returned by the function, which is called using the apply method.
+
+    bind
+
+        The bind method binds the this value to the function and returns a new function. However, we still need to separately invoke the returned function.
+
+        function test(arg){
+         console.log(this.number, arg);
+            }
+
+        let bindedFn = test.bind({number: 99}, "argument");
+
+        bindedFn(); // 99, "argument"
+
+
+    </pre>
+
+    Question 2: What are objects in javascript?
+    <pre>
+        Every thing in javascript is an object.
+        Object is an standalone entity, with properties and types.
+        like a book has a property like total pages, size of the page and all.
+        like a car has a property like its tires, engine, speed. and all.
+    
+        JavaScript objects can have properties, which define their characteristics.
+</pre>
+
+    Question 3:  What are function constructors?
+    <pre>
+    The Function() constructor creates a new Function object. Calling the constructor directly can create functions 
+    dynamically, but suffers from security and similar (but far less significant) performance issues as eval(). However,
+    unlike eval (which may have access to the local scope), the Function constructor creates functions which execute in 
+     the global scope only.
+
+
+    These are the Syntax used by the Functional constructor to create a Function dynamically.
+
+    new Function(functionBody)
+    new Function(arg0, functionBody)
+    new Function(arg0, arg1, functionBody)
+    new Function(arg0, arg1, /* … ,*/ argN, functionBody)
+
+    example:
+
+    const sum = new Function('a', 'b' ,'return a + b');
+
+    console.log(sum(2, 6));
+    // expected output: 8
+
+    const multiply = new Function('a', 'b' ,'return a * b');
+
+    console.log(multiply(2, 6));
+    // expected output: 8
+
+    const power = new Function('a' ,'return a**3 ');
+
+    console.log(power(2));
+    // expected output: 8
+</pre>
+    Question 4: Explain prototypes?
+
+    <pre>
+        Every object in JavaScript has a built-in property, which is called its prototype. 
+        The prototype is itself an object, so the prototype will have its own prototype,
+        making what's called a prototype chain. The chain ends when we reach a prototype 
+        that has null for its own prototype.
+        object --> object constructor --> null
+        function --> function constructor --> object constructor --> null
+
+
+    </pre>
+
+    Question 5: Give an example of inheritance using function constructor
+
+    <pre>
+        function Coder(name,age, gender, id){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.id = id;
+        }
+        
+        function programmer(name,age, gender,id, specialization){
+            Coder.call(this,name,age,gender,id)//dont forget to include this, when are calling it using the call method.
+            this.specialization = specialization;//help in taking the input and assigning
+            
+        }
+        const elo = new Coder('raju',3,'male',2);
+        const eloo = new programmer('neha',1,'female',4,'Full stack developer');
+        console.log(elo)
+        console.log(eloo)
+
+
+        Here programmer function is inheriting properties inside Coder and also adding a new property of Specialization.
+        here we are using Function constructor(elo,  eloo) 
+
+        In JavaScript, the this keyword refers to an object.
+
+        Which object depends on how this is being invoked (used or called).
+        Methods like call(), apply(), and bind() can refer this to any object.
+    </pre>
+
+    Question 6: What are callbacks?
+
+    <pre>
+        Callbacks make sure that a function is not going to run before a task is completed but will run right after the task has completed.
+        It helps us develop asynchronous JavaScript code and keeps us safe from problems and errors.
+
+        const button = document.getElementById('fetchusers');
+
+        button.addEventListeners('click', fetchUsers);
+
+        here we have created a button and accessing it using get element by id.
+        to add a event we used addEventListeners and on clicking "fetchusers"(call back function) function is called.
+
+        <a href="https://www.simplilearn.com/tutorials/javascript-tutorial/callback-function-in-javascript">Click here for more information</a>
+    </pre>
+
+    Question 7: What is the use of setTimeout?
+    <pre>
+        Syntax for setTimeout
+
+        setTimeout(code)
+        setTimeout(code, delay)
+
+        setTimeout(functionRef)
+        setTimeout(functionRef, delay)
+        setTimeout(functionRef, delay, param1)
+        setTimeout(functionRef, delay, param1, param2)
+        setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+
+         the function will be executed when the delay time is completed
+
+         Example:
+            setTimeout(raju,3000)
+            function raju(){
+            console.log('heloo')
+
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/setTimeout">Click here for more information</a>
+        </pre>
+
+    Question 8: What are pure functions?
+
+    <pre>
+
+        A Pure Function is a function (a block of code) that always returns the same result
+        if the same arguments are passed.
+
+        function calculateGST( productPrice ) {
+            return productPrice * 0.05;
+        }
+        this is a pure function, can output is not getting effected by any variable
+
+        here we are not having any external variable.
+
+        let tax = 20;
+        function calculateGST( productPrice ) {
+            return productPrice * 0.05*tax;
+
+        now this is not a pure function cause, when ever value of external variable(tax) is getting
+        changed the output is also getting changed.
+
+        <a href="https://www.geeksforgeeks.org/pure-functions-in-javascript/">>Click here for more information</a>
+    </pre>
+
+    
+
+</body>
+</html>
