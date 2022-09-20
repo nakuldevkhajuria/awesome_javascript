@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Question 1: What are promises and why do we need them?
+    <pre>
+        Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with 
+        multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code.
+
+        var promise = new Promise(function(resolve, reject) {
+            resolve('Welcome everyone');
+           })
+           
+           promise
+            .then(function(successMessage) {
+            //success handler function is invoked
+             console.log(successMessage);
+            }, function(errorMessage) {
+             console.log(errorMessage);
+            })
+           
+            Second example:
+
+            var promise = new Promise(function(resolve, reject) {
+                const x = "mynameis";
+                const y = "mynameis"
+                if(x === y) {
+                  resolve();
+                } else {
+                  reject();
+                }
+              });
+                 
+              promise.
+                  then(function () {
+                      console.log('Success, Your name is nakul');
+                  }).
+                  catch(function () {
+                      console.log('Some error has occurred');
+                  });
+    </pre>
+
+    Question 2: What is the purpose of async/await keywords?
+
+    <pre>
+        The async keyword turns a method into an async method, which allows you to use the await keyword in its body. 
+        When the await keyword is applied, it suspends the calling method and yields control back to its caller until
+         the awaited task is complete. await can only be used inside an async method
+
+
+         You can not use the await keyword in a regular, non-async function. JavaScript engine will throw a syntax error 
+         if you try doing so.
+    </pre>
+
+    Question 3: What is hoisting?
+
+    <pre>
+        Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope 
+        before code execution. Inevitably, this means that no matter where functions and variables are declared, they are
+         moved to the top of their scope regardless of whether their scope is global or local
+
+    </pre>
+
+    Question 4: What is the DOM?
+    <pre>
+        The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that 
+        programs can change the document structure, style, and content. The DOM represents the document as nodes and 
+        objects; that way, programming languages can interact with the page.
+    </pre>
+
+    Question 5: Difference between undefined vs not defined vs NaN
+
+    <pre>
+        Javascript null represents the intentional absence of any object value. The undefined property indicates that the
+         variable has not been assigned a value or not declared at all. The NaN property represents a “Not-a-Number” 
+         value. The NaN property indicates that a value is not a legitimate number.
+
+    </pre>
+
+    Question 6:How many operators do we have in JS ?
+
+    <pre>
+        JavaScript includes operators that perform some operation on single or multiple operands (data value) and produce 
+        a result. JavaScript includes various categories of operators: Arithmetic operators, Comparison operators, 
+        Logical operators, Assignment operators, Conditional operators.
+
+    </pre>
+
+    Question 7: What is callback hell
+
+    <pre>
+        Callback Hell: Callback Hell is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code.
+    </pre>
+
+    Question 8: What is promise chaining
+
+    <pre>
+        Promise chaining: Promise chaining is a syntax that allows you to chain together multiple asynchronous tasks in a 
+        specific order. This is great for complex code where one asynchronous task needs to be performed after the 
+        completion of a different asynchronous task.
+
+    </pre>
+
+    Question 9: What are arrow functions?
+
+    <pre>
+        Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create 
+        functions in a cleaner way compared to regular functions.
+
+
+        functions which includes a fatty arrow. and on the left side we have inputs and on right we have
+        output code
+        it looks like this:
+        () => {}
+        if we need to give name to it.
+        let testCase = () => {}
+    </pre>
+
+    Question 10: Give an example of async/await
+
+    <pre>
+        
+    </pre>
+    <script src="./index.js"></script>
+</body>
+</html>
